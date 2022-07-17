@@ -62,7 +62,7 @@ export default class Register extends Component<Props, State> {
   }
 
   handleRegister(formValue: { username: string; email: string; password: string, wallet: string }) {
-    const { username, email, password, wallet } = formValue;
+    const { username, email, password } = formValue;
 
     this.setState({
       message: "",

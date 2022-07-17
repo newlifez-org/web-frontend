@@ -3,7 +3,6 @@ import { Redirect } from "react-router-dom";
 import IUser from "../types/user.type";
 import UserService from "../services/user.service";
 
-
 type Props = {};
 
 type State = {
@@ -31,10 +30,10 @@ export default class Profile extends Component<Props, State> {
   }
 
   handleProfile() {
-    UserService.getUserProfile().then((data : any) => {
+    UserService.getUserProfile().then(async (data : any) => {
       let nftInfo: any = [];
       if(data.data.list_tokens) {
-        data.data.list_tokens.forEach(async (item : any) => {
+        for (const item of data.data.list_tokens) {
           const nft = await UserService.getNFTDetail(item.token_uri);
           nftInfo.push({
             id: item.token_id,
@@ -42,13 +41,15 @@ export default class Profile extends Component<Props, State> {
             description: nft.data.description,
             name: nft.data.name,
           })
-        })
+        }
         this.setState({nft : nftInfo});
       }
-    }).catch((error) => {
-      localStorage.removeItem("user");
-      localStorage.removeItem("token");
-      this.setState({ redirect: "/login" });
+    }, error => {
+      if (error.response && error.response.status === 401) {
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
+        this.setState({ redirect: "/login" });
+      }
     });
   }
 
@@ -65,7 +66,7 @@ export default class Profile extends Component<Props, State> {
         <div id="character-list">
           <div id="list-item" className="row col-12">
             {nft.map((item: any) => (
-              <div className="col-md-3 col-6 view-item view-active">
+              <div key="{item}" className="col-md-3 col-6 view-item view-active">
                 <div className="view-detail">
                   <div className="character-detail-bg-1-list">
                   </div>

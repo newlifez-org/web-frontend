@@ -1,5 +1,4 @@
 import axios from "axios";
-import authHeader from './auth-header';
 
 const API_URL = 'https://dev.api.newlifez.io/v1.0/api/auth/';
 
@@ -35,11 +34,15 @@ class AuthService {
     if (coin98IsInstalled) {
       const chainId = "serenity-testnet-001";
       coin98.connect(chainId).then((accounts : any) => {
-        localStorage.setItem("wallet", accounts[0]);
+        if (accounts && accounts[0]) {
+          localStorage.setItem("wallet", accounts[0]);
+        } else {
+          localStorage.removeItem("wallet");
+        }
+        window.location.reload();
       }).catch((e: Error) => {
-        console.log("accounts", e);
+        window.location.reload();
       });
-      
     }
   }
   register(username: string, email: string, password: string, wallet: string) {
@@ -61,7 +64,7 @@ class AuthService {
   getCurrentWallet() {
     const wallet = localStorage.getItem("wallet");
 
-    if (wallet) {
+    if (wallet && window.coin98.provider.isConnected()) {
       return wallet.toString()
     } else {
       localStorage.removeItem("wallet");

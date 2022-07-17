@@ -45,10 +45,6 @@ class App extends Component<Props, State> {
     EventBus.on("logout", this.logOut);
   }
 
-  componentWillMount() {
-    AuthService.connect();
-  }
-
   componentWillUnmount() {
     EventBus.remove("logout", this.logOut);
   }
@@ -62,7 +58,6 @@ class App extends Component<Props, State> {
   }
   connect() {
     AuthService.connect();
-    window.location.reload();
   }
 
   render() {
@@ -73,7 +68,7 @@ class App extends Component<Props, State> {
       <div id="home">
         <nav className="navbar navbar-expand navbar-light">
           <Link to={"/"} className="navbar-brand nav-logo">
-            <img src="../assets/images/logo.png" />
+            <img src="./assets/images/logo.png" />
           </Link>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">

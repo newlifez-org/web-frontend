@@ -1,0 +1,258 @@
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+.card-container.card {
+  max-width: 350px !important;
+  padding: 40px 40px;
+  background: transparent linear-gradient(180deg, #F4F9FF 0%, #DBEAFB 17%, #D2E5FA 52%, #E1EDFB 92%, #F2F8FE 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0vw 1vw 1vw rgb(0 123 255 / 7%);
+  border-radius: 1vw;
+  opacity: 1;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.nav-logo {
+  width: 5%;
+}
+.nav-logo img {
+  width: 100%;
+}
+
+#character-list {
+	position: relative;
+	width: 100%;
+	overflow: visible;
+}
+#list-item {
+  display: flex;
+  padding: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+.view-item {
+  height: 17.5vw;
+  display: flex;
+  justify-content: center;
+}
+.view-detail {
+  width: 75%;
+  z-index: 1;
+}
+.character-detail-bg-1-list {
+  position: absolute;
+  height: 100%;
+  width: 65%;
+  background: #B7D8F9 0% 0% no-repeat padding-box;
+  box-shadow: inset 2vw -4vw 6vw #ffffffc3, 0px 3px 16px #317ac66a;
+  border-radius: 1vw;
+  opacity: 1;
+}
+.character-detail-bg-2-list {
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  background: #eff4f9 0% 0% no-repeat padding-box;
+  box-shadow: inset 2vw -4vw 6vw #fffffff7;
+  border-radius: 1vw;
+  opacity: 1;
+}
+.character-detail-bg-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.character-detail-content, .character-detail-content-list {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  overflow: visible;
+  bottom: 0;
+  padding: 2%;
+}
+.character-detail-bg-3-list {
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-buy-character {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 70%;
+  font-style: normal;
+  text-transform: uppercase;
+  overflow: visible;
+  background: transparent linear-gradient(180deg, #F9F08C 0%, #E7A300 39%, #FF8027 100%) 0% 0% no-repeat padding-box;
+  border-radius: 1vw;
+  opacity: 1;
+  align-items: center;
+  padding: 0 5%;
+  box-shadow: inset 0vw -0.1vw 0.1vw #9b4509;
+  justify-content: center;
+}
+.coin {
+  position: relative;
+  height: inherit;
+}
+.tag-name {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font: normal normal bold 1.1vw Barlow;
+  color: #011F41;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.price-character {
+  position: relative;
+  overflow: visible;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2vw;
+  color: rgba(144,44,0,1);
+  text-transform: uppercase;
+  margin: 0 10%;
+}
+.item-character {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+}
+.item-character-list {
+  position: absolute;
+  width: 65%;
+  height: 85%;
+}
+.item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stage-item {
+  position: absolute;
+  width: 90%;
+  bottom: -17%;
+}
+.stage-character {
+  width: 100%;
+}
+.item-character-bg {
+	position: absolute;
+  width: 100%;
+	height: 100%;
+  padding: 2%;
+}
+.background-price {
+	width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.pricing {
+	position: relative;
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.character-content {
+	overflow: visible;
+	width: 100%;
+	height: 100%;
+	background: transparent linear-gradient(180deg, #FFFFFF 0%, #DBEAFB 17%, #D2E5FA 52%, #FFFFFF 92%, #F7F8FC 100%) 0% 0% no-repeat padding-box;
+	opacity: 1;
+  border-radius: 10%;
+}
+.character-detail {
+    position: relative;
+    height: 75%;
+    width: 100%;
+    display: flex;
+    z-index: 0;
+    justify-content: center;
+}
+.image-character {
+	position: absolute;
+	width: 80%;
+}
+#home {
+  position: relative;
+  width: -webkit-fill-available;
+  overflow: hidden;
+  --web-view-name: Home;
+  --web-view-id: Home;
+  --web-scale-on-resize: true;
+  --web-enable-deep-linking: true;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./assets/images/starfield-deep-space-many-ligh.png);
+  background-size: cover;
+  min-height: 100vh;
+}
+.nav-link {
+  color: #fff !important;
+}
+#your-nft {
+  background: transparent linear-gradient(180deg, #50abf7 0%, #D7ECFE 51%, #4e8bda 100%) 0% 0% no-repeat padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Barlow';
+  font-weight: bold;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+}
+#address-wallet {
+  display: inline-block;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  color: #065dbd !important;
+  font-style: italic;
+}
+#bg-video {
+  width: 100%;
+}

@@ -37,7 +37,9 @@ class App extends Component<Props, State> {
     const user = AuthService.getCurrentUser();
     let wallet = AuthService.getCurrentWallet();
 
-    if (user && wallet && wallet !== undefined) {
+    console.log('========> User: ', user);
+    console.log('========> Wallet: ', wallet);
+    if (user && wallet) {
       this.setState({
         walletAddress: wallet,
         currentUser: user,

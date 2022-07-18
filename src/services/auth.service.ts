@@ -68,6 +68,8 @@ class AuthService {
       return wallet.toString()
     } else {
       localStorage.removeItem("wallet");
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
     }
 
     return undefined;

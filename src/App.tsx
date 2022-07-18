@@ -39,12 +39,10 @@ class App extends Component<Props, State> {
 
     console.log('========> User: ', user);
     console.log('========> Wallet: ', wallet);
-    if (user && wallet) {
-      this.setState({
-        walletAddress: wallet,
-        currentUser: user,
-      });
-    }
+    this.setState({
+      walletAddress: wallet,
+      currentUser: user,
+    });
 
     EventBus.on("logout", this.logOut);
   }

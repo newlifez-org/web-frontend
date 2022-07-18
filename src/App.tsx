@@ -37,10 +37,12 @@ class App extends Component<Props, State> {
     const user = AuthService.getCurrentUser();
     let wallet = AuthService.getCurrentWallet();
 
-    this.setState({
-      walletAddress: wallet,
-      currentUser: user,
-    });
+    if (user && wallet && wallet !== undefined) {
+      this.setState({
+        walletAddress: wallet,
+        currentUser: user,
+      });
+    }
 
     EventBus.on("logout", this.logOut);
   }

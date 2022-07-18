@@ -64,7 +64,9 @@ class AuthService {
   getCurrentWallet() {
     const wallet = localStorage.getItem("wallet");
 
-    if (wallet && window.ethereum.isConnected()) {
+    const { ethereum } = window;
+    console.log('=======> ', ethereum);
+    if (wallet) {
       return wallet.toString()
     } else {
       localStorage.removeItem("wallet");

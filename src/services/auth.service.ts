@@ -64,7 +64,7 @@ class AuthService {
   getCurrentWallet() {
     const wallet = localStorage.getItem("wallet");
 
-    if (wallet && window.coin98.provider.isConnected()) {
+    if (wallet && window.ethereum.isConnected()) {
       return wallet.toString()
     } else {
       localStorage.removeItem("wallet");
